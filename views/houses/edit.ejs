@@ -1,0 +1,95 @@
+<% layout('layouts/boilerplate')%>
+<link rel="stylesheet" href="/stylesheets/about.css">
+
+<div class="row">
+    <h1 class="text-center text-white mt-5">Edit Dream House</h1>
+    <!----------Responsive add md-->
+    <div class="col-md-6 offset-md-3">
+        <!-------images folder-->
+        <!--<form action="/houses/<%=house._id%>?_method=PUT" method="POST" novalidate class="validated-form">---->
+        <form action="/houses/<%=house._id%>?_method=PUT" method="POST" novalidate class="validated-form"
+            enctype="multipart/form-data">
+
+            <div class="mb-3 text-white">
+                <label class="form-label" for="title">Name</label>
+                <input class="form-control" type="text" id="title" name="house[title]" value="<%=house.title %>"
+                    required>
+                <!--feedback----->
+                <div class="valid-feedback">
+                    looks good!
+                </div>
+            </div>
+            <!------->
+
+            <!--------->
+            <div class="mb-3 text-white">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="house[location]"
+                    value="<%=house.location %>" required>
+                <!--feedback----->
+                <div class="valid-feedback">
+                    looks good!
+                </div>
+            </div>
+
+
+            <!--------------------------------------------->
+            <div class="mb-3 text-white">
+                <label class="form-label" for="price">House Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+                        aria-describedby="price-label" name="house[price]" value="<%=house.price %>" required>
+                    <!--feedback----->
+                    <div class="valid-feedback">
+                        looks good!
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mb-3 text-white">
+                <label class="form-label" for="description">Description Url</label>
+                <textarea class="form-control" type="text" id="description" name="house[description]"
+                    required><%= house.description%></textarea>
+                <!--feedback----->
+                <div class="valid-feedback">
+                    looks good!
+                </div>
+            </div>
+
+
+
+            <!----------Upload images---form------>
+            <div class="mb-3 text-white">
+                <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="image" multiple>
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">Add image(s)...</span>
+                        <span class="form-file-button">Upload</span>
+                    </label>
+                </div>
+            </div>
+
+            <!------change img.url--to img.thumbnail---Uploads small size-/model campground js------->
+            <div class="mb-3 text-white">
+                <% house.images.forEach(function(img, i) { %>
+                <img src="<%=img.thumbnail %>" class="img-thumbnail" alt="">
+                <div class="form-check-inline">
+                    <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                    <label for="image-<%=i%>">DELETE?</label>
+                </div>
+                <% })%>
+            </div>
+
+
+            <div class="mb-3">
+                <button class="btn btn-warning">Update Dream House</button>
+            </div>
+        </form>
+        <a href="/houses/<%= house._id%>">Back to Dream House</a>
+
+    </div>
+</div>
+<script>index.ejs</script>
+<!-----script move to boilerplate-------------->

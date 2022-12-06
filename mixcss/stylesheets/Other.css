@@ -1,0 +1,248 @@
+.vh-100 {
+   
+    /*background-image: url("/img/Baloonh-61.jpg");*/
+   background-color: rgb(65, 88, 112);
+  
+    background-size: cover;
+    background-position: center;
+    
+    
+   
+    /*background-color: #67325bbd!important;*/
+    
+}
+
+.nav-color {
+    background-color: #1e0a1fe3!important;
+    
+}
+
+.footer-1 {
+    color: #b0ddeb;
+    text-decoration: underline;
+}
+a {
+    color: #b0ddeb;
+    text-decoration: underline;
+} 
+
+.text-white {
+    color: #c3c9f3!important;
+    letter-spacing: 2px;
+    font-size: 22px;
+}
+
+/*----pop up*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: rgb(160, 141, 141);
+    float: right;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+      text-align: center;
+  }
+  button {
+  color: rgb(202, 196, 196);
+  border: solid rgb(62, 122, 62);
+  }
+  
+  .p-1 {
+      color: black;
+  }
+  .info-pop {
+      background-color: #8fbc8f05;
+  }
+  /*end  pop*/
+  .about-site {
+    color: ivory;
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+  
+
+.aria-hidden {
+  color: black;
+}
+/*AH-footer*/
+.AH-addhouse {
+  color: #6c757d;
+  text-decoration: none;
+
+}
+
+/*  --------Flex column */
+.flex-columns.flex-reverse.row {
+  flex-direction: row-reverse;
+}
+
+.flex-columns .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.flex-columns .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+  height: 100%;
+  width: 100%;
+  margin-bottom:20px;
+ 
+ 
+}
+
+
+  
+.bg-color {
+  /*background: #5cb85c;*/
+  border: 4px solid green;
+  /*margin-left: 5px;*/
+  
+  color: #fff;
+}
+.bg-color-2 {
+  /*background: #5c96b8;*/
+  border: 4px solid  #638ba3;
+  color: #fff;
+  /*justify-content: center;*/
+  
+
+}
+.btn {
+  background: #5cb85c;
+ 
+  color: #fff
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+}
+.flex-columns img {
+  width: 100%;
+  height: 100%;
+  
+  object-fit: cover;
+
+}
+
+.flex-columns .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}
+
+
+/*.flex-columns .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  
+}*/
+.flex-columns h2 {
+  font-size: 40px;
+  font-weight: 100;
+
+}
+.flex-columns h4 {
+  margin-bottom: 10px;
+}
+.flex-columns p {
+  margin: 20px 0;
+  font-size: 22px;
+  letter-spacing: 1px;
+  
+}
+/*    Mobile */
+@media(max-width: 768px) {
+.flex-columns .column {
+  flex: 90%;
+  max-width: 90%;
+
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2 {
+   
+    width: 120%;
+  
+
+} 
+
+.flex-columns p {
+ 
+  font-size: 16px;
+  margin: 3px 0;
+  
+  
+}
+
+
+}
+

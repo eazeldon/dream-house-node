@@ -1,0 +1,45 @@
+<!------<link rel="stylesheet" href="/stylesheets/main.css">--->
+
+<nav class="navbar navbar-expand-lg navbar-dark nav-color py-0 fixed-top">
+
+    <div class="container-fluid">
+        <!----/img/logo-22.jpg-->
+        <a class="navbar-brand mb-4" href="#"><img src="/img/logo16.png" style="width:170px; height:50px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home Page</a>
+                </li>
+                <!------>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/houses">Houses</a>
+                </li>
+                <!----Saff use----->
+                <!--------- <li class="nav-item">
+                    <a class="nav-link" href="/houses/new">Add houses</a>
+                </li>------>
+
+            </ul>
+        </div>
+        <!----ml-auto-right side------>
+        <div class="navbar-nav ml-auto">
+            <!-------hide login or register--app-js--->
+            <% if(!currentUser) {%>
+            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/register">Register</a>
+            <% } else {%>
+            <a class="nav-link" href="/logout">Logout</a>
+            <% } %>
+
+        </div>
+    </div>
+</nav>

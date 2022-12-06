@@ -1,0 +1,41 @@
+.vh-100 {
+    /*background-color:  #2f656552;*/
+   /* background-color: #402745c4;*/
+   background-color:rgb(65, 88, 112);
+}   
+
+/*Nav bar*/
+.nav-color {
+    background-color: #58335ac7;
+}
+
+/*----Index campground buttons------*/
+.btn-outline-info {
+color: #673ab7;
+border: 2px solid  #f44336;
+border-radius: 25px;
+}
+
+/***Ancor tag <a ***/
+.footer-1 {
+    color: #b0ddeb;
+    text-decoration: underline;
+}
+a {
+    color: #b0ddeb;
+    text-decoration: underline;
+}  
+.AH-addhouse {
+    color: #6c757d;
+    text-decoration: none;
+
+}
+.py-4 {
+padding-top: 6.5rem!important;
+}
+
+
+
+
+
+

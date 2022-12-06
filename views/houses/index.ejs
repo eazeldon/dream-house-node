@@ -1,0 +1,79 @@
+<% layout('layouts/boilerplate')%>
+
+<!--<link rel="stylesheet" href="/stylesheets/main.css">---->
+<link rel="stylesheet" href="/stylesheets/about.css">
+
+<h1 class="text-center header-dream text-white mt-4 py-4">Your Dream House</h1>
+
+<!-------<div id="cluster-map"></div>------->
+
+
+
+<!------Admin use only------------->
+<!--<a href="/houses/new">Add houses</a>--->
+
+<!-----Admin use only------------->
+
+
+<% for (let house of houses){%>
+
+<div class="card mb-3 mt-4">
+    <div class="row">
+        <!--col-md-4----->
+        <!--<div class="col-md-6">--->
+        <div class="col-md-5">
+            <!-------defluat--image--->
+            <%if(house.images.length) {%>
+
+
+            <img class="img-fluid" alt="" src="<%=house.images[0].url%>">
+            <% }else {%>
+            <img class="img-fluid" alt=""
+                src="https://res.cloudinary.com/project-img/image/upload/v1612937914/camp-site/r7jvt5fhymyajgowbsh0.jpg">
+
+            <% } %>
+        </div>
+        <!----col-md-8------->
+        <div class="col-md-4">
+
+            <div class="card-body">
+
+                <h5 class="card-title text-muted">By: <%= house.title %></h5>
+
+
+
+                <p class="card-text">Description: <%= house.description %></p>
+                <p class="card-text">
+                    <small class="text-muted">Location: <%= house.location%></small>
+                </p>
+                <a class="btn btn-outline-info" href="/houses/<%=house._id%>">Show houses:
+                    <%=house.title%></a>
+
+                <!------Admin use only------------->
+
+               <!--- <a href="/houses/new">Add houses</a>-->
+
+
+                <!-----Admin use only------------->
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+    
+      
+</div>
+
+
+
+<% }%>
+
+<script>
+    const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    const houses = { features: <%- JSON.stringify(houses) %>}
+</script>
+
+<script src="/javascripts/clusterMaps.js"></script>

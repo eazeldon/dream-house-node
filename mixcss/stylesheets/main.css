@@ -1,0 +1,60 @@
+.col-6 {
+    flex: 0 0 auto;
+    width: 500px;
+}
+/***-----------Background image*/
+    /*  .vh-100 {
+    background-image: linear-gradient(rgba(39, 36, 36, 0.5), rgba(0, 0, 0, 0.5)), url("/img/bfly35.jpg");
+    background-size: cover;
+    background-position: center;*/
+
+/*background-color:  #2f656552;*/
+/*}*/
+
+/***-----copy------Background image*/
+.vh-100 {
+   
+    background-image: url("/img/bfly39.jpg");
+    background-size: cover;
+    background-position: center;
+/*********NAV BAr Color*********/
+}
+.nav-color {
+    /**background-color: #9e9e9e!important;*/
+    background-color: #603263e6;
+}
+
+/*-inside Houses page---Index campground buttons------*/
+.btn-outline-info {
+color: #673ab7;
+border: 2px solid  #f44336;
+border-radius: 25px;
+}
+/**Ancor tag <a**/
+.footer-1 {
+    color: #b0ddeb;
+    text-decoration: underline;
+}
+a {
+    color: #b0ddeb;
+    text-decoration: underline;
+}  
+/*AH-footer*/
+.AH-addhouse {
+    color: #6c757d;
+    text-decoration: none;
+  
+  }
+
+  
+.py-5 {
+
+        padding-top: 6.5rem!important;
+}
+  
+
+
+
+
+/***Inside Images***/
+
